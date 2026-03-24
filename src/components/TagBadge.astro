@@ -6,16 +6,22 @@ interface Props {
 const { tag } = Astro.props;
 
 const tagColors: Record<string, string> = {
+	// Pricing
 	free: '#22c55e',
 	paid: '#ef4444',
 	freemium: '#f59e0b',
-	'real-time': '#3b82f6',
+	// Features
 	alerts: '#8b5cf6',
-	legacy: '#6b7280',
-	'price-tracking': '#06b6d4',
 	analytics: '#ec4899',
+	api: '#06b6d4',
+	charts: '#3b82f6',
+	favorites: '#f472b6',
+	planner: '#a855f7',
 	portfolio: '#14b8a6',
-	'discord-bot': '#5865f2'
+	recommendations: '#f97316',
+	recipes: '#84cc16',
+	screener: '#0ea5e9',
+	trends: '#6366f1'
 };
 
 const color = tagColors[tag] || '#888';

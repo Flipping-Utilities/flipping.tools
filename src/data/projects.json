@@ -2,25 +2,164 @@
   {
     "name": "Wiki Prices",
     "slug": "wiki-prices",
-    "tagline": "Real-time Grand Exchange price API from the OSRS Wiki",
+    "tagline": "Simple and fast Grand Exchange prices from the OSRS Wiki. Does not account for tax.",
     "author": "OSRS Wiki",
     "components": {
-      "website": "https://prices.runescape.wiki/",
-      "github": "https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices",
-      "discordServer": "https://discord.gg/Rw6ygWk94M"
+      "website": "https://prices.runescape.wiki/"
     },
-    "tags": ["free", "api", "real-time", "price-tracking"]
+    "tags": ["free", "charts"]
   },
   {
     "name": "GE Tracker",
     "slug": "ge-tracker",
-    "tagline": "Advanced market analysis and portfolio management",
-    "author": "GETracker",
+    "tagline": "Track your trades and show overall profit. Has multiple money makers available.",
+    "author": "GE Tracker",
     "components": {
-      "website": "https://getracker.example.com",
-      "github": "https://github.com/getracker",
-      "discordServer": "https://discord.gg/getracker"
+      "website": "https://www.ge-tracker.com/",
+      "discordServer": "https://discord.gg/AhHfkW8"
     },
-    "tags": ["freemium", "analytics", "portfolio"]
+    "tags": ["freemium", "charts", "portfolio", "analytics"]
+  },
+  {
+    "name": "Flipping Utilities",
+    "slug": "flipping-utilities",
+    "tagline": "Your best friend for flipping: featuring real-time price alerts, portfolio tracking, and recipes to maximise your profit. It seamlessly integrates with RuneLite, Discord, and the web to help you maximize profits.",
+    "author": "Anyny0",
+    "components": {
+      "website": "https://prices.osrs.cloud/",
+      "discordBot": "https://discord.com/oauth2/authorize?client_id=820369903579955230&scope=bot&permissions=314432",
+      "discordServer": "https://discord.gg/flipping",
+      "runelite": "https://runelite.net/plugin-hub/show/flipping-utilities",
+      "github": "https://github.com/Flipping-Utilities/"
+    },
+    "tags": ["freemium", "portfolio", "alerts", "recipes", "charts", "trends", "favorites"]
+  },
+  {
+    "name": "07.gg",
+    "slug": "07gg",
+    "tagline": "Charts, trends, portfolio tracker, and overall market stats.",
+    "author": "07.GG",
+    "components": {
+      "website": "https://07.gg/",
+      "discordServer": "https://discord.gg/Kn59Enzm77"
+    },
+    "tags": ["freemium", "portfolio", "charts", "trends"]
+  },
+  {
+    "name": "Flipping.gg",
+    "slug": "flipping-gg",
+    "tagline": "Live prices, market highlights, item screener, customizable graphs, watchlist, and portfolio.",
+    "author": "Flipping.gg",
+    "components": {
+      "website": "https://flipping.gg/",
+      "discordServer": "https://discord.gg/Y4mabAWSGk"
+    },
+    "tags": ["freemium", "portfolio", "screener", "alerts", "favorites"]
+  },
+  {
+    "name": "Omega Dumps OSRS Server",
+    "slug": "omega-dumps",
+    "tagline": "Price alerts on interesting deals via Discord.",
+    "author": "Jake",
+    "components": {
+      "discordServer": "https://discord.gg/omegadumps"
+    },
+    "tags": ["paid", "alerts"]
+  },
+  {
+    "name": "Flipping Copilot",
+    "slug": "flipping-copilot",
+    "tagline": "RuneLite plugin with AI-based recommendations on items to buy and sell, price history and profit tracking.",
+    "author": "Cillian",
+    "components": {
+      "runelite": "https://runelite.net/plugin-hub/show/flipping-copilot",
+      "website": "https://flippingcopilot.com/",
+      "discordServer": "https://discord.com/invite/UyQxA4QJAq"
+    },
+    "tags": ["freemium", "recommendations"]
+  },
+  {
+    "name": "Gielinor Gains",
+    "slug": "gielinor-gains",
+    "tagline": "Analyzes GE market data to identify profitable trades using technical indicators and a 0-5 scoring system.",
+    "author": "Gielinor Gains",
+    "components": {
+      "website": "https://www.gielinorgains.com/"
+    },
+    "tags": ["freemium", "analytics", "recommendations"]
+  },
+  {
+    "name": "OSRS Exchange",
+    "slug": "osrs-exchange",
+    "tagline": "Review items to flip with support for recipes and death coffer.",
+    "author": "Tlemur",
+    "components": {
+      "website": "https://www.osrs.exchange/",
+      "discordServer": "https://discord.gg/BV4vGeKFUt"
+    },
+    "tags": ["freemium", "recipes"]
+  },
+  {
+    "name": "Runeberg Terminal",
+    "slug": "runeberg-terminal",
+    "tagline": "Alerts, portfolio tracking, dump tracking, item rating, and more.",
+    "author": "Darrien",
+    "components": {
+      "website": "https://runebergterminal.com/",
+      "discordServer": "https://discord.com/invite/RegS5HdhTN"
+    },
+    "tags": ["free", "alerts", "portfolio"]
+  },
+  {
+    "name": "osrs.lol",
+    "slug": "osrs-lol",
+    "tagline": "Item recommendation engine with charts.",
+    "author": "No-Delay",
+    "components": {
+      "website": "https://osrs.lol/"
+    },
+    "tags": ["free", "recommendations", "charts"]
+  },
+  {
+    "name": "Rune.capital",
+    "slug": "rune-capital",
+    "tagline": "Anomaly detection, price history, and market analysis.",
+    "author": "Billy",
+    "components": {
+      "website": "https://rune.capital/"
+    },
+    "tags": ["free", "analytics"]
+  },
+  {
+    "name": "osrs-portfolio.fun",
+    "slug": "osrs-portfolio",
+    "tagline": "Portfolio tracker for your Grand Exchange investments.",
+    "author": "Daanbom",
+    "components": {
+      "website": "https://osrs-portfolio.fun/"
+    },
+    "tags": ["free", "portfolio"]
+  },
+  {
+    "name": "Lootbag",
+    "slug": "lootbag",
+    "tagline": "Item search, alerts, recipes, calculators, and recommendation engine.",
+    "author": "LootbagGG",
+    "components": {
+      "website": "https://lootbag.gg/",
+      "runelite": "https://runelite.net/plugin-hub/show/lootbag",
+      "discordServer": "https://discord.gg/e9sNaZyR66"
+    },
+    "tags": ["free", "alerts", "recipes", "recommendations"]
+  },
+  {
+    "name": "Platinum Tokens",
+    "slug": "platinum-tokens",
+    "tagline": "Search for items and view price history.",
+    "author": "Platinum Tokens",
+    "components": {
+      "website": "https://platinumtokens.com/"
+    },
+    "tags": ["free", "charts"]
   }
 ]
