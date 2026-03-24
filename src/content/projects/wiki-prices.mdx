@@ -1,0 +1,44 @@
+## Overview
+
+Wiki Prices is the official real-time Grand Exchange price API provided by the Old School RuneScape Wiki. It offers free access to current and historical price data for all tradeable items in OSRS.
+
+## Features
+
+- **Real-time pricing** - Live price updates sourced from the game
+- **Multiple averaging periods** - 5-minute and 1-hour average prices
+- **Historical data** - Time series data for price analysis
+- **Item mapping** - Complete item ID to name mappings
+- **Free API access** - No API key required
+
+## API Endpoints
+
+The base URL is `https://prices.runescape.wiki/api/v1/osrs`
+
+### Latest Prices
+
+`GET /latest` - Returns the most recent price for all items.
+
+### 5-Minute Averages
+
+`GET /5m` - Returns 5-minute rolling average prices.
+
+### 1-Hour Averages
+
+`GET /1h` - Returns 1-hour rolling average prices.
+
+### Time Series
+
+`GET /timeseries?timestep=5m&id={itemId}` - Returns historical price data for a specific item. Timestep can be `5m`, `1h`, `6h`, or `24h`.
+
+### Item Mapping
+
+`GET /mapping` - Returns a complete mapping of item IDs to names and other metadata.
+
+## Usage
+
+The API is free to use but subject to an acceptable use policy. Rate limiting may apply for excessive requests. The service is partnered with RuneLite and powers many popular flipping tools.
+
+## Links
+
+- [Official Documentation](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices)
+- [API Endpoint](https://prices.runescape.wiki/api/v1/osrs)

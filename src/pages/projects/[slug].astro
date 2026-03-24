@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectHeader from '../../components/ProjectHeader.astro';
+import projects from '../../data/projects.json';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+	const mdxEntries = await getCollection('projects');
+	const mdxMap = new Map(mdxEntries.map(e => [e.id.replace('.mdx', ''), e]));
+
+	return projects.map(project => ({
+		params: { slug: project.slug },
+		props: {
+			project,
+			mdxEntry: mdxMap.get(project.slug) || null
+		}
+	}));
+}
+
+const { project, mdxEntry } = Astro.props;
+const { Content } = mdxEntry ? await render(mdxEntry) : { Content: null };
+---
+
+<BaseLayout title={project.name} description={project.tagline}>
+	<ProjectHeader {...project} />
+
+	<article class="project-content">
+		{Content ? (
+			<Content />
+		) : (
+			<div class="placeholder">
+				<p>Detailed description coming soon...</p>
+				<p>Know more about this project? <a href="https://github.com/Flipping-Utilities/flipping.tools">Contribute on GitHub</a></p>
+			</div>
+		)}
+	</article>
+
+	<nav class="back-nav">
+		<a href="/">← Back to all projects</a>
+	</nav>
+</BaseLayout>
+
+<style>
+	.project-content {
+		max-width: 720px;
+		line-height: 1.7;
+	}
+
+	.project-content :global(h2) {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		color: var(--fg);
+	}
+
+	.project-content :global(p) {
+		margin-bottom: 1rem;
+		color: var(--fg-muted);
+	}
+
+	.project-content :global(ul),
+	.project-content :global(ol) {
+		margin-bottom: 1rem;
+		padding-left: 1.5rem;
+		color: var(--fg-muted);
+	}
+
+	.project-content :global(li) {
+		margin-bottom: 0.5rem;
+	}
+
+	.project-content :global(a) {
+		color: var(--accent);
+	}
+
+	.project-content :global(code) {
+		background: var(--bg-elevated);
+		padding: 0.125rem 0.375rem;
+		border-radius: 4px;
+		font-size: 0.875em;
+	}
+
+	.project-content :global(pre) {
+		background: var(--bg-elevated);
+		padding: 1rem;
+		border-radius: var(--radius);
+		overflow-x: auto;
+		margin: 1rem 0;
+	}
+
+	.placeholder {
+		background: var(--bg-elevated);
+		border: 1px dashed var(--border);
+		border-radius: var(--radius);
+		padding: 2rem;
+		text-align: center;
+	}
+
+	.placeholder p {
+		color: var(--fg-muted);
+	}
+
+	.placeholder p:last-child {
+		margin-bottom: 0;
+		font-size: 0.875rem;
+	}
+
+	.back-nav {
+		margin-top: 3rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.back-nav a {
+		color: var(--fg-muted);
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	.back-nav a:hover {
+		color: var(--accent);
+	}
+</style>

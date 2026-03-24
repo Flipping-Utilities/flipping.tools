@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Wiki Prices",
+    "slug": "wiki-prices",
+    "tagline": "Real-time Grand Exchange price API from the OSRS Wiki",
+    "author": "OSRS Wiki",
+    "components": {
+      "website": "https://prices.runescape.wiki/",
+      "github": "https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices",
+      "discordServer": "https://discord.gg/Rw6ygWk94M"
+    },
+    "tags": ["free", "api", "real-time", "price-tracking"]
+  },
+  {
+    "name": "GE Tracker",
+    "slug": "ge-tracker",
+    "tagline": "Advanced market analysis and portfolio management",
+    "author": "GETracker",
+    "components": {
+      "website": "https://getracker.example.com",
+      "github": "https://github.com/getracker",
+      "discordServer": "https://discord.gg/getracker"
+    },
+    "tags": ["freemium", "analytics", "portfolio"]
+  }
+]

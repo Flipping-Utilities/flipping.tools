@@ -1,0 +1,130 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Compare the best flipping tools for Old School RuneScape" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | OSRS Flipping Tools</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<header>
+			<a href="/" class="logo">
+				<strong>OSRS</strong> Flipping Tools
+			</a>
+			<nav>
+				<a href="/">Tools</a>
+				<a href="/resources">Resources</a>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<p>Know a tool that's missing? <a href="https://github.com/Flipping-Utilities/flipping.tools">Submit a PR</a></p>
+		</footer>
+	</body>
+</html>
+
+<style>
+	:root {
+		--bg: #0f0f0f;
+		--bg-elevated: #1a1a1a;
+		--bg-card: #151515;
+		--fg: #e8e8e8;
+		--fg-muted: #888;
+		--accent: #ff9800;
+		--accent-hover: #ffad33;
+		--border: #2a2a2a;
+		--radius: 8px;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: system-ui, -apple-system, sans-serif;
+		background: var(--bg);
+		color: var(--fg);
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		line-height: 1.6;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 2rem;
+		border-bottom: 1px solid var(--border);
+		background: var(--bg-elevated);
+	}
+
+	.logo {
+		font-size: 1.25rem;
+		color: var(--fg);
+		text-decoration: none;
+	}
+
+	.logo strong {
+		color: var(--accent);
+	}
+
+	nav a {
+		color: var(--fg-muted);
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	nav a:hover {
+		color: var(--accent);
+	}
+
+	main {
+		flex: 1;
+		padding: 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	footer {
+		padding: 1.5rem 2rem;
+		border-top: 1px solid var(--border);
+		text-align: center;
+		color: var(--fg-muted);
+		font-size: 0.875rem;
+	}
+
+	footer a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	footer a:hover {
+		text-decoration: underline;
+	}
+
+	a {
+		color: var(--accent);
+	}
+
+	a:hover {
+		color: var(--accent-hover);
+	}
+</style>
