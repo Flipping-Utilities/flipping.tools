@@ -354,6 +354,10 @@ const sortedTags = Array.from(allTags).sort();
 			font-size: 1.5rem;
 		}
 
+		.hero p {
+			font-size: 0.9375rem;
+		}
+
 		.filter-group {
 			flex-direction: column;
 			gap: 0.5rem;
@@ -373,9 +377,67 @@ const sortedTags = Array.from(allTags).sort();
 		}
 	}
 
-	@media (max-width: 480px) {
+	/* Convert table to cards on mobile */
+	@media (max-width: 600px) {
+		.table-wrapper {
+			overflow-x: visible;
+		}
+
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		thead {
+			position: absolute;
+			left: -9999px;
+			visibility: hidden;
+		}
+
+		table {
+			background: transparent;
+		}
+
+		tr {
+			background: var(--bg-card);
+			border-radius: var(--radius);
+			margin-bottom: 0.75rem;
+			padding: 1rem;
+			border: 1px solid var(--border);
+		}
+
+		tr:hover {
+			background: var(--bg-card);
+		}
+
+		td {
+			border: none;
+			padding: 0.25rem 0;
+			position: relative;
+		}
+
+		td:last-child {
+			padding-top: 0.5rem;
+			margin-top: 0.25rem;
+			border-top: 1px solid var(--border);
+		}
+
+		.project-name a {
+			font-size: 1.0625rem;
+		}
+
+		.author {
+			margin-top: 0;
+		}
+
 		.platforms-list {
-			flex-direction: column;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.description a {
+			display: block;
+			margin-top: 0.25rem;
 		}
 	}
+</style>
 </style>

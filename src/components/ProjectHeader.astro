@@ -86,4 +86,19 @@ const componentEntries = Object.entries(components).filter(([_, v]) => v) as [ke
 		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
+
+	@media (max-width: 640px) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		.tagline {
+			font-size: 1rem;
+		}
+
+		.project-header {
+			margin-bottom: 1.5rem;
+			padding-bottom: 1rem;
+		}
+	}
 </style>

@@ -119,4 +119,19 @@ const { Content } = mdxEntry ? await render(mdxEntry) : { Content: null };
 	.back-nav a:hover {
 		color: var(--accent);
 	}
+
+	@media (max-width: 640px) {
+		.project-content {
+			line-height: 1.6;
+		}
+
+		.placeholder {
+			padding: 1.5rem;
+		}
+
+		.back-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+		}
+	}
 </style>
