@@ -161,5 +161,15 @@
       "website": "https://platinumtokens.com/"
     },
     "tags": ["free", "charts"]
+  },
+  {
+    "name": "BuriedServices",
+    "slug": "buriedservices",
+    "tagline": "Live flipping table with profit sorting, filters, favorites, auto-refresh, and item detail charts.",
+    "author": "BuriedServices",
+    "components": {
+      "website": "https://buriedservices.com/ge.html"
+    },
+    "tags": ["free", "screener", "charts", "favorites"]
   }
 ]
