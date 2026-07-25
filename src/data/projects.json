@@ -2,7 +2,7 @@
   {
     "name": "Wiki Prices",
     "slug": "wiki-prices",
-    "tagline": "Simple and fast Grand Exchange prices from the OSRS Wiki. Does not account for tax.",
+    "tagline": "Simple and fast Grand Exchange prices from the OSRS Wiki.",
     "author": "OSRS Wiki",
     "components": {
       "website": "https://prices.runescape.wiki/"
