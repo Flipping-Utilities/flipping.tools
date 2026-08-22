@@ -171,5 +171,15 @@
       "website": "https://buriedservices.com/ge.html"
     },
     "tags": ["free", "screener", "charts", "favorites"]
+  },
+  {
+    "name": "Gielinor Alpha",
+    "slug": "gielinor-alpha",
+    "tagline": "Credit marketplace for ranked GE opportunities. Compare return, profit, capital, and timing while the item stays hidden until you unlock an allocation. You place every trade.",
+    "author": "Gielinor Alpha",
+    "components": {
+      "website": "https://gielinoralpha.com/"
+    },
+    "tags": ["freemium", "recommendations"]
   }
 ]
