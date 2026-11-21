@@ -17,6 +17,8 @@ const { title, description = "Compare the best flipping tools for Old School Run
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | OSRS Flipping Tools</title>
 		<meta name="description" content={description} />
+		<!-- Real-user performance monitoring (web vitals, JS errors) -> SigNoz. Source: osrs.cloud infra/browser-rum -->
+		<script is:inline defer src="/rum.js"></script>
 	</head>
 	<body>
 		<header>
